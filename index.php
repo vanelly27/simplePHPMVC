@@ -22,6 +22,9 @@
             //llamar al controlador
             require_once("controllers/home.control.php");
             break;
+        case "acerca":
+            require_once("controllers/acerca.control.php");
+            break;
         default:
             require_once("controllers/error.control.php");
     }
