@@ -18,6 +18,7 @@
                 <ul>
                     <li><a href="index.php?page=home">Home</a></li>
                     <li><a href="index.php?page=acerca">Acerca de Nosotros</a></li>
+                    <li><a href="index.php?page=productos">Gestión de Produtos</a></li>
                 </ul>
             </div>
             <div class="contenido">

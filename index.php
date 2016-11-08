@@ -25,6 +25,12 @@
         case "acerca":
             require_once("controllers/acerca.control.php");
             break;
+        case "productos":
+            require_once("controllers/productos.control.php");
+            break;
+        case "productosform":
+            require_once("controllers/productosform.control.php");
+            break;
         default:
             require_once("controllers/error.control.php");
     }
