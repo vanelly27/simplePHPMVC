@@ -18,9 +18,29 @@
     return $productos;
   }
 
+  function productos_obtenerPorId($id){
+    $sqlstr = "select * from productos where productoid=%d;";
+    $sqlstr = sprintf($sqlstr,$id);
+    $producto = array();
+    $producto = obtenerUnRegistro($sqlstr);
+    return $producto;
+  }
+
   function productos_insert($cod,$nom, $barra){
     $sqlstr = "Insert into productos(productocod, productodsc, productobarra) value('%s','%s','%s');";
     $sqlstr = sprintf($sqlstr,$cod,$nom,$barra);
+    return ejecutarNonQuery($sqlstr);
+  }
+
+  function productos_update($id, $cod, $nom, $barra){
+    $sqlstr = "Update productos set productocod = '%s', productodsc='%s', productobarra='%s' where productoid=%d;";
+    $sqlstr = sprintf($sqlstr,$cod,$nom,$barra,$id);
+    return ejecutarNonQuery($sqlstr);
+  }
+
+  function productos_delete($id){
+    $sqlstr = "Delete from productos where productoid=%d;";
+    $sqlstr = sprintf($sqlstr,$id);
     return ejecutarNonQuery($sqlstr);
   }
 

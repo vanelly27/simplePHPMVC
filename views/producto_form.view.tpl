@@ -7,14 +7,15 @@
 <div class="row">
   <div class="col-8 col-2-offset">
     <div class="row">
-      <div class="col-2 col-5-offset">
+      <div class="col-2 ">
         <label>Código de Producto</label>
       </div>
       <div class="col-5">
         <input type="text" id="txt_productocod" name="txt_productocod"
           placeholder="Código de Producto"
           value="{{productocod}}"
-          {{productoIsEnabled}} />
+
+          {{inputenable}} />
       </div>
     </div>
   </div>
@@ -22,14 +23,14 @@
 <div class="row">
   <div class="col-8 col-2-offset">
     <div class="row">
-      <div class="col-2 col-5-offset">
+      <div class="col-2 ">
         <label>Código de Barra</label>
       </div>
       <div class="col-5">
         <input type="text" id="txt_productobarra" name="txt_productobarra"
           placeholder="Código de Barra"
           value="{{productobarra}}"
-          {{productoIsEnabled}} />
+          {{inputenable}} />
       </div>
     </div>
   </div>
@@ -37,21 +38,24 @@
 <div class="row">
   <div class="col-8 col-2-offset">
     <div class="row">
-      <div class="col-2 col-5-offset">
+      <div class="col-2 ">
         <label>Producto</label>
       </div>
       <div class="col-5">
         <input type="text" id="txt_productodsc" name="txt_productodsc"
           placeholder="Producto"
           value="{{productodsc}}"
-          {{productoIsEnabled}} />
+          {{inputenable}} />
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-8 col-2-offset">
       <div class="row">
-        <div class="col-2 col-8-offset">
+        <div class="col-2 col-2-offset">
+          {{if isdeleting}}
+            <input type="hidden" value="{{productoid}}" name="hdn_productoid" />
+          {{endif isdeleting}}
           <a class="btn" id="clicksave" href>Guardar</a>
         </div>
         <div class="col-2">
