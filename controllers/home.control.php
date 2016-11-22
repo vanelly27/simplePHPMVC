@@ -8,7 +8,12 @@
 
   function run(){
     addCssRef("public/css/home.css");
-    renderizar("home",array());
+    if (mw_estaLogueado()){
+      renderizar("home",array(),"loggedLayout.view.tpl");
+    }else{
+      renderizar("home",array());
+    }
+
   }
 
 

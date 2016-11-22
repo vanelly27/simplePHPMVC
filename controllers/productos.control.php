@@ -25,7 +25,7 @@
     }else{
       $productos = productos_obtenerPorNombre($arreglo_a_vista["txtNombreProducto"]);
     }
-    
+
     $productosNew = array();
     foreach($productos as $producto){
       $producto["productoestdsc"] = ($producto["productoest"] == "ACT")?"Activo":"Inactivo";
@@ -35,8 +35,14 @@
 
 
 
-    renderizar("productos_list",$arreglo_a_vista);
+    renderizar("productos_list",$arreglo_a_vista, "loggedLayout.view.tpl");
   }
 
-  run();
+  if(mw_estaLogueado()){
+    run();
+  }else{
+      mw_redirectToLogin("index.php?page=productos");
+  }
+
+
 ?>

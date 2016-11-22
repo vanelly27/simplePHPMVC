@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+     date_default_timezone_set("America/Tegucigalpa");
 
     require_once("libs/utilities.php");
 
@@ -22,6 +23,9 @@
             //llamar al controlador
             require_once("controllers/home.control.php");
             break;
+        case "login":
+              require_once("controllers/login.control.php");
+              break;
         case "acerca":
             require_once("controllers/acerca.control.php");
             break;
@@ -30,6 +34,10 @@
             break;
         case "productosform":
             require_once("controllers/productosform.control.php");
+            break;
+        case "logout":
+            mw_setEstaLogueado("",false);
+            redirectWithMessage("Ha cerrado sesión satisfactoriamente!");
             break;
         default:
             require_once("controllers/error.control.php");

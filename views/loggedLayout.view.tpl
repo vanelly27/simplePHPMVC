@@ -17,8 +17,8 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.php?page=home">Home</a></li>
-                    <li><a href="index.php?page=acerca">Acerca de Nosotros</a></li>
-                    <li><a href="index.php?page=login">Iniciar Sesión</a></li>
+                    <li><a href="index.php?page=productos">Productos</a></li>
+                    <li><a href="index.php?page=logout">Cerrar Sesión</a></li>
                 </ul>
             </div>
             <div class="contenido">
