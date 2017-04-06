@@ -22,6 +22,11 @@
             //llamar al controlador
             require_once("controllers/home.control.php");
             break;
+          case "lugarform":
+              //llamar al controlador
+              require_once("controllers/lugarform.control.php");
+              break;
+
         default:
             require_once("controllers/error.control.php");
     }

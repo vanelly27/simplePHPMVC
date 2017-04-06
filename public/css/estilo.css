@@ -55,6 +55,13 @@ header nav ul li a{
   background-color: rgba(0,0,0,0.1);
 }
 
+input[type=text]{
+  padding:0.5em 1em;
+  border-radius: 3px;
+  border: solid 1px #333;
+  
+}
+
 footer{
   position:fixed;
   bottom: 1em;
